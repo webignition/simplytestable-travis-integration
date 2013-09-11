@@ -8,4 +8,6 @@
 #make --silent
 #make --silent install
 
-printf "yes\n" | cpan Bundle::W3C::Validator
+#printf "yes\n" | cpan Bundle::W3C::Validator
+curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+cpanm Bundle::W3C::Validator
