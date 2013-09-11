@@ -33,3 +33,6 @@ cpanm Bundle::W3C::Validator
 mkdir /usr/local/validator && cd /usr/local/validator
 wget http://validator.w3.org/validator.tar.gz && tar -xzf validator.*
 wget http://validator.w3.org/sgml-lib.tar.gz && tar -xzf sgml.*
+
+cp -R validator-1.1/htdocs/* validator-1.3/htdocs/
+mv validator-1.3/htdocs validator-1.3/share validator-1.3/httpd/cgi-bin /usr/local/validator
