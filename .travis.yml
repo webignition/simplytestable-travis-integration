@@ -14,8 +14,7 @@ before_script:
   - ./travis/prep.sh
   
   # Install the W3C HTML validator
-  - cd ~/tmp
-  - wget http://switch.dl.sourceforge.net/project/openjade/opensp/1.5.2/OpenSP-1.5.2.tar.gz
+  - sudo ./travis/install-html-validator.sh
   
   # Install memcache extension and verify installation
   #- wget http://pecl.php.net/get/memcache-2.2.7.tgz

@@ -1,3 +1,3 @@
 #!/bin/sh
 # General prep
-mkdir ~/tmp
+mkdir ~/travis-tmp
