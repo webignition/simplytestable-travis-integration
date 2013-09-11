@@ -8,5 +8,4 @@ cd ~/travis-tmp/OpenSP-*
 make --silent
 make --silent install
 
-wget -O - http://cpanmin.us | perl - --self-upgrade
-cpan Bundle::W3C::Validator
+printf "yes\n" | cpan Bundle::W3C::Validator
