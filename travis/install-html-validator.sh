@@ -40,3 +40,11 @@ mv validator-1.3/htdocs validator-1.3/share validator-1.3/httpd/cgi-bin /usr/loc
 ls -la /usr/local/validator/htdocs
 ls -la /usr/local/validator/share
 ls -la /usr/local/validator/cgi-bin
+
+# Configure validator
+mkdir /etc/w3c
+cp -R /usr/local/validator/config/* /etc/w3c
+
+# Test installation
+cd /usr/local/validator/cgi-bin/
+./check uri=http://www.w3.org/
