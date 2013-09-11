@@ -48,3 +48,7 @@ cp -R /usr/local/validator/config/* /etc/w3c
 # Test installation
 cd /usr/local/validator/cgi-bin/
 ./check uri=http://www.w3.org/
+
+# TEMP - locate jdk
+ls -la /usr/lib/jvm
+
