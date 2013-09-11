@@ -7,3 +7,5 @@ cd ~/travis-tmp/OpenSP-*
 ./configure --quiet --enable-http --disable-doc-build
 make --silent
 make --silent install
+
+cpan Bundle::W3C::Validator
