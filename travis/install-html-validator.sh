@@ -36,3 +36,7 @@ wget http://validator.w3.org/sgml-lib.tar.gz && tar -xzf sgml.*
 
 cp -R validator-1.1/htdocs/* validator-1.3/htdocs/
 mv validator-1.3/htdocs validator-1.3/share validator-1.3/httpd/cgi-bin /usr/local/validator
+
+ls -la /usr/local/validator/htdocs
+ls -la /usr/local/validator/share
+ls -la /usr/local/validator/cgi-bin
