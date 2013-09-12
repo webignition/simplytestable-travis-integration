@@ -45,9 +45,8 @@ ls -la /usr/local/validator/cgi-bin
 mkdir /etc/w3c
 cp -R /usr/local/validator/htdocs/config/* /etc/w3c
 
-# Test installation
-cd /usr/local/validator/cgi-bin/
-./check uri=http://www.w3.org/
+# Test HTML4 strict validation
+/usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><title>Hello World!</title></head><body><p>Foo</p></body></html>'
 
 # TEMP - locate jdk
 ls -la /usr/lib/jvm
