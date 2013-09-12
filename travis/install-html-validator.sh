@@ -43,7 +43,7 @@ ls -la /usr/local/validator/cgi-bin
 
 # Configure validator
 mkdir /etc/w3c
-cp -R /usr/local/validator/config/* /etc/w3c
+cp -R /usr/local/validator/htdocs/config/* /etc/w3c
 
 # Test installation
 cd /usr/local/validator/cgi-bin/
