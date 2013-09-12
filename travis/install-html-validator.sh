@@ -1,5 +1,6 @@
 #!/bin/sh  
 # Install the W3C HTML validator
+uname -a
 
 # Install OpenSP dependency
 cd ~/travis-tmp
