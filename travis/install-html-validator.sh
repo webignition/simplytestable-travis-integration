@@ -45,8 +45,9 @@ mv validator-1.3/htdocs validator-1.3/share validator-1.3/httpd/cgi-bin /usr/loc
 apt-get update
 apt-get install openjdk-7-jdk mercurial svn
 #ls -la /usr/lib/jvm
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py ???
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py build
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py test
 
 # Configure validator
 mkdir /etc/w3c
