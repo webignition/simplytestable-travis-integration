@@ -37,9 +37,16 @@ wget http://validator.w3.org/sgml-lib.tar.gz && tar -xzf sgml*
 cp -R validator-1.1/htdocs/* validator-1.3/htdocs/
 mv validator-1.3/htdocs validator-1.3/share validator-1.3/httpd/cgi-bin /usr/local/validator
 
-ls -la /usr/local/validator/htdocs
-ls -la /usr/local/validator/share
-ls -la /usr/local/validator/cgi-bin
+#ls -la /usr/local/validator/htdocs
+#ls -la /usr/local/validator/share
+#ls -la /usr/local/validator/cgi-bin
+
+# Install validator.nu HTML5 validator
+apt-get update
+apt-get install openjdk-7-jdk
+#ls -la /usr/lib/jvm
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py ???
 
 # Configure validator
 mkdir /etc/w3c
@@ -47,9 +54,4 @@ cp -R /usr/local/validator/htdocs/config/* /etc/w3c
 
 # Test HTML4 strict validation
 /usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><title>Hello World!</title></head><body><p>Foo</p></body></html>'
-
-# TEMP - locate jdk
-apt-get update
-apt-get install  openjdk-7-jdk
-ls -la /usr/lib/jvm
 
