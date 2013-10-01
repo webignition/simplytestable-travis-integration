@@ -9,12 +9,14 @@ php:
   - 5.5
 
 before_script:
+  - pwd
+
   # General prep
-  - sudo chmod +x ./travis/*.sh
-  - ./travis/prep.sh
+  #- sudo chmod +x ./travis/*.sh
+  #- ./travis/prep.sh
   
   # Install the W3C HTML validator
-  - sudo ./travis/install-html-validator.sh
+  #- sudo ./travis/install-html-validator.sh
   
   # Install memcache extension and verify installation
   #- wget http://pecl.php.net/get/memcache-2.2.7.tgz
