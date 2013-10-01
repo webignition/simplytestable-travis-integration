@@ -49,7 +49,10 @@ hg clone https://bitbucket.org/validator/build build
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py build
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py test
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py run
+
+# Create and start HTML5 validator service
+sudo cp ~/travis/html5-validator-service.conf /etc/init/html5-validator.conf
+sudo service html5-validator start
 
 # Configure validator
 mkdir /etc/w3c
