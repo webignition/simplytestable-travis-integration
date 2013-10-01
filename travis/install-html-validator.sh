@@ -49,7 +49,7 @@ hg clone https://bitbucket.org/validator/build build
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py build
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py test
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py run
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py run
 
 # Configure validator
 mkdir /etc/w3c
