@@ -1,4 +1,6 @@
 #!/bin/sh  
+# Note to self: Travis project root is /home/travis/build/<repo>
+# e.g. /home/travis/build/webignition/simplytestable-travis-integration
 # Install the W3C HTML validator
 
 # Install OpenSP dependency
@@ -51,7 +53,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py bui
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py test
 
 # Create and start HTML5 validator service
-sudo cp ~/webignition/simplytestable-travis-integration/travis/html5-validator-service.conf /etc/init/html5-validator.conf
+sudo cp /home/travis/build/webignition/simplytestable-travis-integration/travis/html5-validator-service.conf /etc/init/html5-validator.conf
 sudo service html5-validator start
 
 # Configure validator
