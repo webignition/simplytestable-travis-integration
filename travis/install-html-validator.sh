@@ -59,7 +59,10 @@ sudo service html5-validator start
 # Configure validator
 mkdir /etc/w3c
 cp -R /usr/local/validator/htdocs/config/* /etc/w3c
+sudo sed -i 's/#HTML5/HTML5/g' /etc/w3c/validator.conf
 
 # Test HTML4 strict validation
 /usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><title>Hello World!</title></head><body><p>Foo</p></body></html>'
 
+# Test HTML5 validation
+/usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>title</title></head><body></body></html>'
