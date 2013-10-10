@@ -57,8 +57,10 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py tes
 #sudo service html5-validator start
 #curl -I http://localhost:8888
 
-# Let us see why the html5 validator will not start up
-cd /usr/local/html5-validator && timeout 30 python build/build.py --control-port=8889 run
+# Start up the HTML5 validator service and try connecting to it to test that it works
+cd /usr/local/html5-validator && nohup python build/build.py --control-port=8889 run
+curl -I http://localhost:8888
+
 
 # Configure validator
 mkdir /etc/w3c
