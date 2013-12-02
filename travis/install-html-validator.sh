@@ -51,11 +51,11 @@ hg clone https://bitbucket.org/validator/build build
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all > html5-validator-build.txt &
 
-tail -f html5-validator-build.txt | while read line;do
-   echo "TEST: $line"
+tail -f html5-validator-build.txt | while read -t 30 line;do
+   echo "."
+   # nu.validator.servlet.VerifierServletTransaction - Initialization complete
 done
 
-sleep 5m
 # Started SocketConnector@0.0.0.0:8888
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py build
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py test
