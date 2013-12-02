@@ -49,8 +49,9 @@ apt-get install openjdk-7-jdk mercurial subversion
 mkdir /usr/local/html5-validator && cd /usr/local/html5-validator
 hg clone https://bitbucket.org/validator/build build
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py build
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py test
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all &
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py build
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py test
 
 # Create and start HTML5 validator service
 #sudo cp /home/travis/build/webignition/simplytestable-travis-integration/travis/html5-validator-service.conf /etc/init/html5-validator.conf
@@ -58,7 +59,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py tes
 #curl -I http://localhost:8888
 
 # Start up the HTML5 validator service and try connecting to it to test that it works
-cd /usr/local/html5-validator && python build/build.py --control-port=8889 run &
+#cd /usr/local/html5-validator && python build/build.py --control-port=8889 run &
 curl -v http://localhost:8888
 
 
