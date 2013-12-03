@@ -2,12 +2,7 @@
 # Note to self: Travis project root is /home/travis/build/<repo>
 # e.g. /home/travis/build/webignition/simplytestable-travis-integration
 # Install required PHP extensions
-pwd
-cd /home/travis
-pwd
-php -v
-#which php
-#php -v
+/home/travis/.phpenv/shims/php -v
 
 # Install memcache extension and verify installation
 #sudo apt-get update
