@@ -1,6 +1,11 @@
 services:
   - redis-server
   - memcache
+  
+env:
+  global:
+    - REPO="webignition/worker.simplytestable.com"
+    - CI_HOME=`pwd`/$REPO  
 
 language: php
 php:
