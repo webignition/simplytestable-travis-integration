@@ -10,4 +10,7 @@ sudo apt-get update --assume-yes
 sudo apt-get install nodejs --assume-yes
 
 # See if npm is available
-npm -v
+
+# Check installed node version (did we get the latest, it should have npm but the latest build said otherwise)
+node -v
+#npm -v
