@@ -4,6 +4,8 @@
 # Install required PHP extensions
 
 # Install memcache extension and verify installation
+sudo apt-get update
+sudo apt-get install php5-dev
 wget http://pecl.php.net/get/memcache-2.2.7.tgz
 tar -zxf memcache-2.2.7.tgz
 sh -c "cd memcache-2.2.7 && phpize && ./configure && make --quiet && sudo make --quiet install"
