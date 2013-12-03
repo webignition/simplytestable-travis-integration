@@ -4,7 +4,7 @@
 # Install node-jslint
 
 # Packaged node already present?
-node -v
+nodejs -v
 
 # Install nodejs
 #sudo apt-get install python-software-properties python g++ make
