@@ -40,18 +40,18 @@ cp -R validator-1.1/htdocs/* validator-1.3/htdocs/
 mv validator-1.3/htdocs validator-1.3/share validator-1.3/httpd/cgi-bin /usr/local/validator
 
 # Install validator.nu HTML5 validator
-apt-get update
-apt-get install openjdk-7-jdk mercurial subversion
-mkdir /usr/local/html5-validator && cd /usr/local/html5-validator
-hg clone https://bitbucket.org/validator/build build
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all > html5-validator-install-output.txt &
+#apt-get update
+#apt-get install openjdk-7-jdk mercurial subversion
+#mkdir /usr/local/html5-validator && cd /usr/local/html5-validator
+#hg clone https://bitbucket.org/validator/build build
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all > html5-validator-install-output.txt &
 
-tail -f html5-validator-install-output.txt |grep -m 1 "Initialization complete" | xargs echo "" >> html5-validator-install-output.txt \;
-sleep 30s
+#tail -f html5-validator-install-output.txt |grep -m 1 "Initialization complete" | xargs echo "" >> html5-validator-install-output.txt \;
+#sleep 30s
 
 # Try connecting to the HTML5 validator service to see if it works
-curl -v -I http://localhost:8888
+#curl -v -I http://localhost:8888
 
 
 # Configure validator
@@ -59,8 +59,11 @@ mkdir /etc/w3c
 cp -R /usr/local/validator/htdocs/config/* /etc/w3c
 sudo sed -i 's/#HTML5/HTML5/g' /etc/w3c/validator.conf
 
-# Test HTML4 strict validation
+# Check current config to see what changes are needed to allow file URLs
+cat /etc/w3c/validator.conf | grep Allow
+
+# Test fragment HTML4 strict validation
 /usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><title>Hello World!</title></head><body><p>Foo</p></body></html>'
 
-# Test HTML5 validation
-/usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>title</title></head><body></body></html>'
+# Test fragment HTML5 validation
+#/usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>title</title></head><body></body></html>'
