@@ -19,7 +19,7 @@ before_script:
   - ./travis/prep.sh
   
   # Install the W3C HTML validator
-  - sudo ./travis/install-html-validator.sh
+  #- sudo ./travis/install-html-validator.sh
   
   # Install nodejs and node-jslint
   #- sudo ./travis/install-node-jslint.sh  
@@ -27,12 +27,8 @@ before_script:
   # Install the W3C CSS validator  
   #- sudo ./travis/install-css-validator.sh  
   
-  # Install memcache extension and verify installation
-  #- wget http://pecl.php.net/get/memcache-2.2.7.tgz
-  #- tar -zxf memcache-2.2.7.tgz
-  #- sh -c "cd memcache-2.2.7 && phpize && ./configure && make --quiet && sudo make --quiet install"
-  #- echo "extension=memcache.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s/.*:\s*//"`  
-  #- php -r 'new \Memcache;'
+  # Install PHP extensions
+  - sudo ./travis/install-php-extensions.sh  
   
   # Install composer for dependency management
   #- wget http://getcomposer.org/composer.phar 
