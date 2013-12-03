@@ -39,10 +39,6 @@ wget http://validator.w3.org/sgml-lib.tar.gz && tar -xzf sgml*
 cp -R validator-1.1/htdocs/* validator-1.3/htdocs/
 mv validator-1.3/htdocs validator-1.3/share validator-1.3/httpd/cgi-bin /usr/local/validator
 
-#ls -la /usr/local/validator/htdocs
-#ls -la /usr/local/validator/share
-#ls -la /usr/local/validator/cgi-bin
-
 # Install validator.nu HTML5 validator
 apt-get update
 apt-get install openjdk-7-jdk mercurial subversion
@@ -54,17 +50,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
 tail -f html5-validator-install-output.txt |grep -m 1 "Initialization complete" | xargs echo "" >> html5-validator-install-output.txt \;
 sleep 30s
 
-# Started SocketConnector@0.0.0.0:8888
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py build
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py test
-
-# Create and start HTML5 validator service
-#sudo cp /home/travis/build/webignition/simplytestable-travis-integration/travis/html5-validator-service.conf /etc/init/html5-validator.conf
-#sudo service html5-validator start
-#curl -I http://localhost:8888
-
-# Start up the HTML5 validator service and try connecting to it to test that it works
-#cd /usr/local/html5-validator && python build/build.py --control-port=8889 run &
+# Try connecting to the HTML5 validator service to see if it works
 curl -v -I http://localhost:8888
 
 
