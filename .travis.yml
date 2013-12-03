@@ -19,6 +19,7 @@ before_script:
   - ./travis/prep.sh
   
   - which php
+  - "php -v"
   
   # Install the W3C HTML validator
   #- sudo ./travis/install-html-validator.sh
@@ -42,6 +43,7 @@ before_script:
 script:
   - echo "Hello World!"
   - which php
+  - "php -v"
 
   
 #notifications:
