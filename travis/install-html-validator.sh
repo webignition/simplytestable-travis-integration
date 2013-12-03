@@ -58,8 +58,7 @@ mv validator-1.3/htdocs validator-1.3/share validator-1.3/httpd/cgi-bin /usr/loc
 mkdir /etc/w3c
 cp -R /usr/local/validator/htdocs/config/* /etc/w3c
 sudo sed -i 's/#HTML5/HTML5/g' /etc/w3c/validator.conf
-
-# Check current config to see what changes are needed to allow file URLs
+sudo sed -i 's/Allow = data,ftp,http,https/Allow = data,ftp,http,https,file/g' /etc/w3c/validator.conf
 cat /etc/w3c/validator.conf | grep Allow
 
 # Test fragment HTML4 strict validation
