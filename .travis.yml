@@ -5,8 +5,7 @@ services:
 env:
   global:
     - REPO="webignition/worker.simplytestable.com"
-    - CI_HOME=`pwd`/$REPO  
-    - PATH_TO_PHP=`which php`
+    - CI_HOME=`pwd`/$REPO
 
 language: php
 php:
@@ -19,8 +18,6 @@ before_script:
   - sudo chmod +x ./travis/*.sh
   - ./travis/prep.sh
   
-  - "$PATH_TO_PHP -v"
-  
   # Install the W3C HTML validator
   #- sudo ./travis/install-html-validator.sh
   
@@ -31,7 +28,7 @@ before_script:
   #- sudo ./travis/install-css-validator.sh  
   
   # Install PHP extensions
-  #- sudo ./travis/install-php-extensions.sh  
+  - sudo ./travis/install-php-extensions.sh  
   
   # Install composer for dependency management
   #- wget http://getcomposer.org/composer.phar 
