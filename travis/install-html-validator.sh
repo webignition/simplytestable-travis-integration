@@ -49,7 +49,7 @@ apt-get install openjdk-7-jdk mercurial subversion
 mkdir /usr/local/html5-validator && cd /usr/local/html5-validator
 hg clone https://bitbucket.org/validator/build build
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all > html5-validator-build.txt &
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ && python build/build.py all &
 sleep 5m
 
 # Started SocketConnector@0.0.0.0:8888
