@@ -1,4 +1,3 @@
-#!/bin/sh  
 # Note to self: Travis project root is /home/travis/build/<repo>
 # e.g. /home/travis/build/webignition/simplytestable-travis-integration
 # Install required PHP extensions
