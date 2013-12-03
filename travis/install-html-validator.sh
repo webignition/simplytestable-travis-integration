@@ -63,16 +63,16 @@ sleep 5m
 
 # Start up the HTML5 validator service and try connecting to it to test that it works
 #cd /usr/local/html5-validator && python build/build.py --control-port=8889 run &
-curl -v http://localhost:8888
+curl -v -I http://localhost:8888
 
 
 # Configure validator
-#mkdir /etc/w3c
-#cp -R /usr/local/validator/htdocs/config/* /etc/w3c
-#sudo sed -i 's/#HTML5/HTML5/g' /etc/w3c/validator.conf
+mkdir /etc/w3c
+cp -R /usr/local/validator/htdocs/config/* /etc/w3c
+sudo sed -i 's/#HTML5/HTML5/g' /etc/w3c/validator.conf
 
 # Test HTML4 strict validation
-#/usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><title>Hello World!</title></head><body><p>Foo</p></body></html>'
+/usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><title>Hello World!</title></head><body><p>Foo</p></body></html>'
 
 # Test HTML5 validation
-#/usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>title</title></head><body></body></html>'
+/usr/local/validator/cgi-bin/check output=json fragment='<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>title</title></head><body></body></html>'
