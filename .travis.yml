@@ -18,6 +18,8 @@ before_script:
   - sudo chmod +x ./travis/*.sh
   - ./travis/prep.sh
   
+  - which php
+  
   # Install the W3C HTML validator
   #- sudo ./travis/install-html-validator.sh
   
@@ -28,7 +30,7 @@ before_script:
   #- sudo ./travis/install-css-validator.sh  
   
   # Install PHP extensions
-  - sudo ./travis/install-php-extensions.sh  
+  #- sudo ./travis/install-php-extensions.sh  
   
   # Install composer for dependency management
   #- wget http://getcomposer.org/composer.phar 
@@ -39,6 +41,7 @@ before_script:
   
 script:
   - echo "Hello World!"
+  - which php
 
   
 #notifications:
