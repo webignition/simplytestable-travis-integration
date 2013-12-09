@@ -15,7 +15,7 @@ php:
 
 before_script:
   # General prep
-  - sudo chmod +x ./travis/*.sh
+  - sudo chmod -R +x ./travis/*.sh
   - ./travis/prep.sh
   
   # Install the W3C HTML validator
