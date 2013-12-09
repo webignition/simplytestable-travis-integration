@@ -18,7 +18,7 @@ before_script:
   - sudo chmod -R +x ./travis/*.sh
   - sudo chmod -R +x travis/install/3rdparty/*.sh
   - sudo chmod -R +x travis/install/simplytestable/*.sh
-  - sudo chmod -R +x travis/install/simplytestable/core/app/*.sh
+  - sudo chmod -R +x travis/install/simplytestable/core-app/*.sh
   - ./travis/prep.sh
   
   # Install the W3C HTML validator
