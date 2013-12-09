@@ -19,16 +19,16 @@ before_script:
   - ./travis/prep.sh
   
   # Install the W3C HTML validator
-  - sudo ./travis/install/3rdparty/html-validator.sh
+  #- sudo ./travis/install/3rdparty/html-validator.sh
   
   # Install nodejs and node-jslint
-  - sudo ./travis/install/3rdparty/node-jslint.sh  
+  #- sudo ./travis/install/3rdparty/node-jslint.sh  
 
   # Install the W3C CSS validator  
-  - sudo ./travis/install/3rdparty/css-validator.sh  
+  #- sudo ./travis/install/3rdparty/css-validator.sh  
   
   # Install PHP extensions
-  - sudo ./travis/install/3rdparty/php-extensions.sh  
+  #- sudo ./travis/install/3rdparty/php-extensions.sh  
   
   # Install composer for dependency management
   - wget http://getcomposer.org/composer.phar 
@@ -36,6 +36,12 @@ before_script:
   # Set the GitHub OAuth token to make use of the 6000 per hour rate limit
   - "mkdir -p ~/.composer"
   - cp .travis.composer.config.json ~/.composer/config.json  
+  
+  # Prep for installing SimplyTestable applications
+  - ./travis/install/simplytestable/prep.sh
+  
+  # Install core app
+  - ./travis/install/simplytestable/core-app/install.sh
   
 script:
   - echo "Hello World!"
