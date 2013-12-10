@@ -14,6 +14,9 @@ php:
   #- 5.5
 
 before_script:
+  # Disable strict host checking for github.com
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  
   # General prep
   - sudo chmod -R +x ./travis/*.sh
   - sudo chmod -R +x travis/install/3rdparty/*.sh
