@@ -55,6 +55,8 @@ before_script:
   - ./travis/install/simplytestable/core-app/install.sh
   - ./travis/install/simplytestable/core-app/configure-nginx.sh
   - ./travis/install/simplytestable/core-app/set-hosts-entry.sh
+  - ping app.integration.simplytestable.com
+  - "curl -v -I http://app.integration.simplytestable.com/"
   
 script:
   - echo "Hello World!"
