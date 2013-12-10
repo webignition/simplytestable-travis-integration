@@ -3,9 +3,8 @@
 # e.g. /home/travis/build/webignition/simplytestable-travis-integration
 # Install SimplyTestable core application
 mkdir ~/simplytestable/app.integration.simplytestable.com && cd ~/simplytestable/app.integration.simplytestable.com 
-pwd
 
-ls -la /home/travis/build/webignition/simplytestable-travis-integration/simplytestable/app.integration.simplytestable.com
+ls -la /home/travis/www/simplytestable/app.integration.simplytestable.com
 
 git clone https://github.com/webignition/app.simplytestable.com.git .
 

@@ -58,8 +58,8 @@ before_script:
   - "curl -v -I http://app.integration.simplytestable.com/"
   - "curl -v http://app.integration.simplytestable.com/status/"
   
-  - ls -la /home/travis/build/webignition/simplytestable-travis-integration/simplytestable/app.integration.simplytestable.com/web
-  - ls -la /home/travis/build/webignition/simplytestable-travis-integration/simplytestable/app.integration.simplytestable.com
+  - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/web
+  - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com
   - la -la /var/log/nginx
   
 script:
