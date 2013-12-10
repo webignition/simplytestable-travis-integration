@@ -4,4 +4,4 @@
 # Install SimplyTestable core application
 mkdir ~/simplytestable/app.simplytestable.com && cd ~/simplytestable/app.simplytestable.com 
 
-git clone git@github.com:webignition/app.simplytestable.com.git .
+git clone https://github.com/webignition/app.simplytestable.com.git .
