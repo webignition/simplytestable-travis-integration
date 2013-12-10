@@ -3,11 +3,11 @@ server {
 
   client_max_body_size 0;
  
-  server_name app.simplytestable.com;
-  root /home/travis/build/webignition/simplytestable-travis-integration/simplytestable/app.simplytestable.com/web;
+  server_name ;
+  root /home/travis/build/webignition/simplytestable-travis-integration/simplytestable/app.integration.simplytestable.com/web;
  
-  error_log /var/log/nginx/app.simplytestable.com.error.log;
-  access_log /var/log/nginx/app.simplytestable.com.access.log;
+  error_log /var/log/nginx/app.integration.simplytestable.com.error.log;
+  access_log /var/log/nginx/app.integration.simplytestable.com.access.log;
  
   # strip app.php/ prefix if it is present
   rewrite ^/app\.php/?(.*)$ /$1 permanent;
