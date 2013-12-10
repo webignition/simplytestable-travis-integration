@@ -58,6 +58,9 @@ before_script:
   - "curl -v -I http://app.integration.simplytestable.com/"
   - "curl -v http://app.integration.simplytestable.com/status/"
   
+  - ls -la /home/travis/build/webignition/simplytestable-travis-integration/simplytestable/app.integration.simplytestable.com/web
+  - la -la /var/log/nginx
+  
 script:
   - echo "Hello World!"
   
