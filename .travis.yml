@@ -53,7 +53,7 @@ before_script:
   
   # Install core app, configure nginx and hosts entry
   - ./travis/install/simplytestable/core-app/install.sh
-  - ./travis/install/simplytestable/core-app/configure-ngnix.sh
+  - ./travis/install/simplytestable/core-app/configure-nginx.sh
   - ./travis/install/simplytestable/core-app/set-hosts-entry.sh
   
 script:
