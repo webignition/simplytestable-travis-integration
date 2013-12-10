@@ -3,7 +3,7 @@ server {
 
   client_max_body_size 0;
  
-  server_name ;
+  server_name app.integration.simplytestable.com;
   root /home/travis/build/webignition/simplytestable-travis-integration/simplytestable/app.integration.simplytestable.com/web;
  
   error_log /var/log/nginx/app.integration.simplytestable.com.error.log;
