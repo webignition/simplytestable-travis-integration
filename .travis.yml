@@ -36,6 +36,9 @@ before_script:
   # Install PHP extensions
   #- sudo ./travis/install/3rdparty/php-extensions.sh  
   
+  # Install nginx and php-fpm
+  - sudo ./travis/install/3rdparty/nginx-php-fpm.sh
+  
   # Install composer for dependency management
   - cd $CI_HOME
   - wget http://getcomposer.org/composer.phar 
@@ -46,10 +49,10 @@ before_script:
   - cp .travis.composer.config.json ~/.composer/config.json  
   
   # Prep for installing SimplyTestable applications
-  - ./travis/install/simplytestable/prep.sh
+  #- ./travis/install/simplytestable/prep.sh
   
   # Install core app
-  - ./travis/install/simplytestable/core-app/install.sh
+  #- ./travis/install/simplytestable/core-app/install.sh
   
 script:
   - echo "Hello World!"
