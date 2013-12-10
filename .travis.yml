@@ -4,7 +4,7 @@ services:
   
 env:
   global:
-    - REPO="webignition/worker.simplytestable.com"
+    - REPO="webignition/simplytestable-travis-integration"
     - CI_HOME=`pwd`/$REPO
 
 language: php
@@ -37,7 +37,9 @@ before_script:
   #- sudo ./travis/install/3rdparty/php-extensions.sh  
   
   # Install composer for dependency management
+  - cd $CI_HOME
   - wget http://getcomposer.org/composer.phar 
+  - chmod +x composer.phar
   
   # Set the GitHub OAuth token to make use of the 6000 per hour rate limit
   - "mkdir -p ~/.composer"

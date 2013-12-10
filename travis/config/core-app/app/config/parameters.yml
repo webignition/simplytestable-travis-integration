@@ -1,0 +1,18 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: null
+    database_name: core_app_integration
+    database_user: root
+    database_password: null
+    mailer_auth_mode: login
+    mailer_transport: smtp
+    mailer_host: localhost
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: SetThis!
+    admin_user_email: travis.admin@example.com
+    admin_user_password: password1
+    stripe_api_key: stripe_api_key_value
+    default_trial_period: 30
