@@ -56,7 +56,7 @@ before_script:
   - ./travis/install/simplytestable/core-app/configure-nginx.sh
   - ./travis/install/simplytestable/core-app/set-hosts-entry.sh
   - "curl -v -I http://app.integration.simplytestable.com/"
-  - "curl -v http://app.integration.simplytestable.com/status/"
+  - "curl -v http://app.integration.simplytestable.com/"
   
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/web
   - ls -la /var/log/nginx
