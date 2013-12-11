@@ -63,6 +63,8 @@ before_script:
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/app
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/app/cache
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs
+  - cat /etc/nginx/logs/app.integration.simplytestable.com.access.log
+  - cat /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs/dev.log
   
 script:
   - echo "Hello World!"
