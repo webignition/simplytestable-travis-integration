@@ -59,8 +59,8 @@ before_script:
   - "curl -v http://app.integration.simplytestable.com/status/"
   
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/web
-  - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com 
   - ls -la /var/log/nginx
+  - cat /etc/nginx/nginx.conf
   
 script:
   - echo "Hello World!"

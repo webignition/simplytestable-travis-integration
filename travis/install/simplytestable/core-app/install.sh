@@ -4,8 +4,6 @@
 # Install SimplyTestable core application
 mkdir ~/simplytestable/www/app.integration.simplytestable.com && cd ~/simplytestable/www/app.integration.simplytestable.com 
 
-ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com
-
 git clone https://github.com/webignition/app.simplytestable.com.git .
 
 mkdir app/cache/prod && chmod -R 0777 app/cache/prod
