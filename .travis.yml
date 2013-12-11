@@ -55,18 +55,14 @@ before_script:
   - ./travis/install/simplytestable/core-app/install.sh
   - ./travis/install/simplytestable/core-app/configure-nginx.sh
   - ./travis/install/simplytestable/core-app/set-hosts-entry.sh
-  - "curl -v -I http://app.integration.simplytestable.com/"
-  - "curl -v http://app.integration.simplytestable.com/"
-  
-  - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/web
-  - ls -la /var/log/nginx
-  - cat /etc/nginx/nginx.conf
-  - ls -la /etc/nginx/sites-available
-  - ls -la /etc/nginx/sites-enabled
-  - cat /etc/nginx/sites-available/app.integration.simplytestable.com.conf
-  - cat /etc/nginx/sites-enabled/app.integration.simplytestable.com.conf
+
   - sudo service nginx restart
   - "curl -v http://app.integration.simplytestable.com/"
+  - ls -la /var/log/nginx  
+  - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/
+  - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/app
+  - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/app/cache
+  - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs
   
 script:
   - echo "Hello World!"

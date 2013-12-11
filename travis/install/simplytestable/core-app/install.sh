@@ -6,8 +6,8 @@ mkdir ~/simplytestable/www/app.integration.simplytestable.com && cd ~/simplytest
 
 git clone https://github.com/webignition/app.simplytestable.com.git .
 
-mkdir app/cache/prod && chmod -R 0777 app/cache/prod
-touch app/logs/prod.log && chmod 0777 app/logs/prod.log
+mkdir app/cache/prod && chmod -R 0777 app/cache
+touch app/logs/prod.log && chmod 0777 app/logs
 
 cp /home/travis/build/webignition/simplytestable-travis-integration/travis/config/core-app/app/config/parameters.yml app/config/parameters.yml
 cp src/SimplyTestable/ApiBundle/Resources/config/parameters.yml.dist.yml src/SimplyTestable/ApiBundle/Resources/config/parameters.yml
