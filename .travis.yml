@@ -61,6 +61,8 @@ before_script:
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/web
   - ls -la /var/log/nginx
   - cat /etc/nginx/nginx.conf
+  - ls -la /etc/nginx/sites-available
+  - ls -la /etc/nginx/sites-enabled
   
 script:
   - echo "Hello World!"
