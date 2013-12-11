@@ -63,6 +63,10 @@ before_script:
   - cat /etc/nginx/nginx.conf
   - ls -la /etc/nginx/sites-available
   - ls -la /etc/nginx/sites-enabled
+  - cat /etc/nginx/sites-available/app.integration.simplytestable.com.conf
+  - cat /etc/nginx/sites-enabled/app.integration.simplytestable.com.conf
+  - sudo service nginx restart
+  - "curl -v http://app.integration.simplytestable.com/"
   
 script:
   - echo "Hello World!"
