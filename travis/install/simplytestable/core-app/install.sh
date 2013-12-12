@@ -16,4 +16,4 @@ export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console doctrine:d
 export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console doctrine:migrations:migrate --no-interaction
 export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console doctrine:fixtures:load --append
 
-export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console simplytestable:task:assign 1
+export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console
