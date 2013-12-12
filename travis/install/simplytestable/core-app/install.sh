@@ -15,3 +15,5 @@ echo | /home/travis/build/webignition/simplytestable-travis-integration/composer
 export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console doctrine:database:create
 export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console doctrine:migrations:migrate --no-interaction
 export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console doctrine:fixtures:load --append
+
+export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console simplytestable:task:assign 1
