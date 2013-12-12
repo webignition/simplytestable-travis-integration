@@ -12,6 +12,6 @@ touch app/logs/prod.log && chmod 0777 app/logs
 cp /home/travis/build/webignition/simplytestable-travis-integration/travis/config/core-app/app/config/parameters.yml app/config/parameters.yml
 cp src/SimplyTestable/ApiBundle/Resources/config/parameters.yml.dist.yml src/SimplyTestable/ApiBundle/Resources/config/parameters.yml
 echo | /home/travis/build/webignition/simplytestable-travis-integration/composer.phar install
-/home/travis/.phpenv/shims/php app/console doctrine:database:create
-/home/travis/.phpenv/shims/php app/console doctrine:migrations:migrate --no-interaction
-/home/travis/.phpenv/shims/php app/console doctrine:fixtures:load --append
+export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console doctrine:database:create
+export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console doctrine:migrations:migrate --no-interaction
+export SYMFONY_ENV=prod && /home/travis/.phpenv/shims/php app/console doctrine:fixtures:load --append
