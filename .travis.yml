@@ -66,7 +66,7 @@ before_script:
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs
   - cat /var/log/nginx/app.integration.simplytestable.com.access.log
   - tail /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs/prod.log -n30
-  - cat /var/log/php5-fpm.log
+  - sudo cat /var/log/php5-fpm.log
   
 script:
   - echo "Hello World!"
