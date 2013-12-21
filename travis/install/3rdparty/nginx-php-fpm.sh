@@ -7,6 +7,7 @@
 sudo apt-get update
 sudo apt-get install nginx
 sudo apt-get install php5-fpm
+sudo apt-get install php5-mysql
 sudo service nginx start
 sudo service nginx status
 

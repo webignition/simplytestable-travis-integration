@@ -68,6 +68,7 @@ before_script:
   - tail /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs/prod.log -n30
   - sudo cat /var/log/php5-fpm.log
   - php -r "phpinfo();" | grep pdo
+  - cat /home/travis/simplytestable/www/app.integration.simplytestable.com/app/config/parameters.yml
   
 script:
   - echo "Hello World!"
