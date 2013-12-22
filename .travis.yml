@@ -69,6 +69,7 @@ before_script:
   - sudo cat /var/log/php5-fpm.log
   - php -r "phpinfo();" | grep pdo
   - cat /home/travis/simplytestable/www/app.integration.simplytestable.com/app/config/parameters.yml
+  - sudo find / -name 'php.ini'
   
 script:
   - echo "Hello World!"
