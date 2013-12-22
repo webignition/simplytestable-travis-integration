@@ -70,6 +70,8 @@ before_script:
   - php -r "phpinfo();" | grep pdo
   - cat /home/travis/simplytestable/www/app.integration.simplytestable.com/app/config/parameters.yml
   - sudo find / -name 'php.ini'
+  - cat /home/travis/.phpenv/versions/5.4.22/etc/php.ini
+  - cat /etc/php5/fpm/php.ini
   
 script:
   - echo "Hello World!"
