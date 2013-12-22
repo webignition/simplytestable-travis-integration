@@ -58,6 +58,7 @@ before_script:
 
   #- sudo service nginx restart
   - "curl -v http://app.integration.simplytestable.com/"
+  - "curl -v http://app.integration.simplytestable.com/info.php"
   - ls -la /var/log/nginx  
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/app
