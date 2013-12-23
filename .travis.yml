@@ -66,25 +66,25 @@ before_script:
   - ls -la /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs
   - cat /var/log/nginx/app.integration.simplytestable.com.access.log
   - tail /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs/prod.log -n30
-  - sudo apt-get install php5-mysql
-  - sudo service php5-fpm restart
-  - sudo service nginx restart
-  - sudo find / -name pdo.so
-  - sudo find / -name pdo_mysql.so
-  - sudo cat /var/log/php5-fpm.log
-  - php -r "phpinfo();"
-  - cat /home/travis/simplytestable/www/app.integration.simplytestable.com/app/config/parameters.yml
-  - sudo find / -name 'php.ini'
-  - cat /home/travis/.phpenv/versions/5.4.22/etc/php.ini
-  - cat /etc/php5/fpm/php.ini
-  - cat /etc/php5/fpm/conf.d/pdo.ini
-  - ls -la /etc/php5/fpm/conf.d
-  - ls -la /etc/php5/conf.d
-  - sudo find / -name '*.ini'
-  - "curl -v http://app.integration.simplytestable.com/"
-  - cat /var/log/nginx/app.integration.simplytestable.com.access.log
-  - tail /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs/prod.log -n30  
-  - ls -la /etc/php5
+  #- sudo apt-get install php5-mysql
+  #- sudo service php5-fpm restart
+  #- sudo service nginx restart
+  #- sudo find / -name pdo.so
+  #- sudo find / -name pdo_mysql.so
+  #- sudo cat /var/log/php5-fpm.log
+  #- php -r "phpinfo();"
+  #- cat /home/travis/simplytestable/www/app.integration.simplytestable.com/app/config/parameters.yml
+  #- sudo find / -name 'php.ini'
+  #- cat /home/travis/.phpenv/versions/5.4.22/etc/php.ini
+  #- cat /etc/php5/fpm/php.ini
+  #- cat /etc/php5/fpm/conf.d/pdo.ini
+  #- ls -la /etc/php5/fpm/conf.d
+  #- ls -la /etc/php5/conf.d
+  #- sudo find / -name '*.ini'
+  #- "curl -v http://app.integration.simplytestable.com/"
+  #- cat /var/log/nginx/app.integration.simplytestable.com.access.log
+  #- tail /home/travis/simplytestable/www/app.integration.simplytestable.com/app/logs/prod.log -n30  
+  #- ls -la /etc/php5
   
 script:
   - echo "Hello World!"
