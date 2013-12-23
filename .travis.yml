@@ -72,6 +72,9 @@ before_script:
   - sudo find / -name 'php.ini'
   - cat /home/travis/.phpenv/versions/5.4.22/etc/php.ini
   - cat /etc/php5/fpm/php.ini
+  - cat /etc/php5/fpm/conf.d/pdo.ini
+  - ls -la /etc/php5/fpm/conf.d
+  - sudo find / -name '*.ini'
   
 script:
   - echo "Hello World!"
