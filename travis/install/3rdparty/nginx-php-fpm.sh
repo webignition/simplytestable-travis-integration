@@ -13,3 +13,5 @@ sudo service nginx status
 
 sudo service php5-fpm restart
 sudo service nginx restart
+
+ls -la /etc/php5/conf.d
