@@ -11,4 +11,5 @@ sudo apt-get install php5-fpm
 sudo service nginx start
 sudo service nginx status
 
-sudo service php5-fpm status
+sudo service php5-fpm restart
+sudo service nginx restart
