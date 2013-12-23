@@ -77,6 +77,7 @@ before_script:
   - cat /etc/php5/fpm/php.ini
   - cat /etc/php5/fpm/conf.d/pdo.ini
   - ls -la /etc/php5/fpm/conf.d
+  - ls -la /etc/php5/conf.d
   - sudo find / -name '*.ini'
   
 script:
